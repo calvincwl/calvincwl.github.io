@@ -251,6 +251,136 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/06/06/set-araxis-to-git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Calvin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神の記述">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/06/set-araxis-to-git/" itemprop="url">修改Git默认合并比较工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T18:52:33+08:00">
+                2017-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>刚开始使用GitHub，感觉做比较之类的工具kdiff3比较粗糙，想要使用Araxis的工具来可视化Merge/Diff，于是上网找了点方法。</p>
+<hr>
+<h1 id="设置Merge工具"><a href="#设置Merge工具" class="headerlink" title="设置Merge工具"></a>设置Merge工具</h1><ol>
+<li><p>指定Merge工具名</p>
+<pre><code>git config --global merge.tool araxis
+</code></pre></li>
+<li><p>指定Merge工具路径</p>
+<pre><code>git config --global mergetool.araxis.path &apos;C:\Program Files\Araxis\Araxis Merge\Compare&apos;
+</code></pre></li>
+</ol>
+<h1 id="设置Diff工具"><a href="#设置Diff工具" class="headerlink" title="设置Diff工具"></a>设置Diff工具</h1><ol>
+<li><p>指定Diff工具名</p>
+<pre><code>git config --global merge.tool araxis
+</code></pre></li>
+<li><p>指定Diff工具路径</p>
+<pre><code>git config --global mergetool.araxis.path &apos;C:\Program Files\Araxis\Araxis Merge\Compare&apos;
+</code></pre></li>
+</ol>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>Araxis现在使用Compare工具就可以实现Merge和Diff的功能，比起单独配置AraxisGitMerge和AraxisGitDiff工具更方便（无需设置各种参数）。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/06/06/unity-to-android/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -430,7 +560,7 @@ public static int PluginLangType()
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -443,7 +573,7 @@ public static int PluginLangType()
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
