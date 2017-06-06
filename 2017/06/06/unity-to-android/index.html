@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Unity3D," />
 
 
 
@@ -90,16 +90,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
+<meta name="keywords" content="Unity3D">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://calvincwl.github.io/2017/05/24/hello-world/index.html">
+<meta property="og:title" content="unity与android&#x2F;ios之间的相互调用">
+<meta property="og:url" content="https://calvincwl.github.io/2017/06/06/unity-to-android/index.html">
 <meta property="og:site_name" content="神の記述">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-05-24T08:34:21.846Z">
+<meta property="og:description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
+<meta property="og:updated_time" content="2017-06-06T10:06:25.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="unity与android&#x2F;ios之间的相互调用">
+<meta name="twitter:description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
 
 
 
@@ -113,7 +114,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -127,16 +128,16 @@
 
 
 
-  <link rel="canonical" href="https://calvincwl.github.io/2017/05/24/hello-world/"/>
+  <link rel="canonical" href="https://calvincwl.github.io/2017/06/06/unity-to-android/"/>
 
 
 
 
 
-  <title>Hello World | 神の記述</title>
+  <title>unity与android/ios之间的相互调用 | 神の記述</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -200,7 +201,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -210,7 +211,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -220,7 +221,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -253,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/05/24/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/06/06/unity-to-android/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Calvin">
@@ -270,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">unity与android/ios之间的相互调用</h1>
         
 
         <div class="post-meta">
@@ -280,10 +281,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-24T16:34:21+08:00">
-                2017-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T17:54:32+08:00">
+                2017-06-06
               </time>
             
 
@@ -317,15 +318,38 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="unity调用android和ios接口的方法"><a href="#unity调用android和ios接口的方法" class="headerlink" title="unity调用android和ios接口的方法"></a>unity调用android和ios接口的方法</h1><p>代码示例：</p>
+<pre><code>[DllImport(&quot;__Internal&quot;)]
+private static extern int _LangType();
+public static int PluginLangType()
+{
+#if UNITY_EDITOR
+    return 10;
+#elif UNITY_IOS
+    return _LangType();
+    #elif UNITY_ANDROID
+    using(AndroidJavaClass jc = new AndroidJavaClass(&quot;com.TKZC.MoblieInterFace&quot;))
+    {
+        if (jc != null)
+        {
+            return jc.CallStatic&lt;int&gt;(&quot;LangType&quot;);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+#else
+    return 10;
+#endif
+}
+</code></pre><h1 id="android调用unity接口"><a href="#android调用unity接口" class="headerlink" title="android调用unity接口"></a>android调用unity接口</h1><p>代码示例：</p>
+<pre><code>public static void Login()
+{
+    UnityPlayer.UnitySendMessage(&quot;CoroutineHost&quot;, &quot;LoginCallback&quot;, android.provider.Settings.Secure.getString(UnityPlayerNativeActivity.GetUnityPlayer().getContentResolver(), android.provider.Settings.Secure.ANDROID_ID));
+}
+</code></pre><p>UnitySendMessage中的第一个参数是unity里的gameobject，第二个是挂在这个go上的脚本的接口名，因此原则上需要被调用的go只挂一个script比较好。</p>
 
       
     </div>
@@ -352,6 +376,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Unity3D/" rel="tag"># Unity3D</a>
+          
+        </div>
       
 
       
@@ -403,10 +433,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -427,13 +457,22 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -465,7 +504,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity调用android和ios接口的方法"><span class="nav-number">1.</span> <span class="nav-text">unity调用android和ios接口的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android调用unity接口"><span class="nav-number">2.</span> <span class="nav-text">android调用unity接口</span></a></li></ol></div>
             
 
           </div>
@@ -497,11 +536,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
