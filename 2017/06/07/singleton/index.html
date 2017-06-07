@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="unity,unity3d," />
+  <meta name="keywords" content="singleton," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
-<meta name="keywords" content="unity,unity3d">
+<meta name="description" content="通常创建单件的代码都是长这样的： class USingleton { public:     static USingleton* Instance()     {         if (Instance == null)         {             Instance = new USingleton();         }         return Instance;">
+<meta name="keywords" content="singleton">
 <meta property="og:type" content="article">
-<meta property="og:title" content="unity与android&#x2F;ios之间的相互调用">
-<meta property="og:url" content="https://calvincwl.github.io/2017/06/06/unity-to-android/index.html">
+<meta property="og:title" content="创建单件的方法">
+<meta property="og:url" content="https://calvincwl.github.io/2017/06/07/singleton/index.html">
 <meta property="og:site_name" content="神の記述">
-<meta property="og:description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
-<meta property="og:updated_time" content="2017-06-07T02:39:37.055Z">
+<meta property="og:description" content="通常创建单件的代码都是长这样的： class USingleton { public:     static USingleton* Instance()     {         if (Instance == null)         {             Instance = new USingleton();         }         return Instance;">
+<meta property="og:updated_time" content="2017-06-07T03:02:46.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="unity与android&#x2F;ios之间的相互调用">
-<meta name="twitter:description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
+<meta name="twitter:title" content="创建单件的方法">
+<meta name="twitter:description" content="通常创建单件的代码都是长这样的： class USingleton { public:     static USingleton* Instance()     {         if (Instance == null)         {             Instance = new USingleton();         }         return Instance;">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://calvincwl.github.io/2017/06/06/unity-to-android/"/>
+  <link rel="canonical" href="https://calvincwl.github.io/2017/06/07/singleton/"/>
 
 
 
 
 
-  <title>unity与android/ios之间的相互调用 | 神の記述</title>
+  <title>创建单件的方法 | 神の記述</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/06/06/unity-to-android/">
+    <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/06/07/singleton/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Calvin">
@@ -271,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">unity与android/ios之间的相互调用</h1>
+          <h1 class="post-title" itemprop="name headline">创建单件的方法</h1>
         
 
         <div class="post-meta">
@@ -283,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T17:54:32+08:00">
-                2017-06-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T10:31:41+08:00">
+                2017-06-07
               </time>
             
 
@@ -318,38 +318,43 @@
       
 
       
-        <h1 id="unity调用android和ios接口的方法"><a href="#unity调用android和ios接口的方法" class="headerlink" title="unity调用android和ios接口的方法"></a>unity调用android和ios接口的方法</h1><p>代码示例：</p>
-<pre><code>[DllImport(&quot;__Internal&quot;)]
-private static extern int _LangType();
-public static int PluginLangType()
+        <p>通常创建单件的代码都是长这样的：</p>
+<pre><code>class USingleton
 {
-#if UNITY_EDITOR
-    return 10;
-#elif UNITY_IOS
-    return _LangType();
-    #elif UNITY_ANDROID
-    using(AndroidJavaClass jc = new AndroidJavaClass(&quot;com.TKZC.MoblieInterFace&quot;))
+public:
+    static USingleton* Instance()
     {
-        if (jc != null)
+        if (Instance == null)
         {
-            return jc.CallStatic&lt;int&gt;(&quot;LangType&quot;);
+            Instance = new USingleton();
         }
-        else
-        {
-            return 0;
-        }
+        return Instance;
     }
 
-#else
-    return 10;
-#endif
+private:
+    USingleton();
+
+    USingleton* Instance;
 }
-</code></pre><h1 id="android调用unity接口"><a href="#android调用unity接口" class="headerlink" title="android调用unity接口"></a>android调用unity接口</h1><p>代码示例：</p>
-<pre><code>public static void Login()
+</code></pre><p>最近看了《游戏编程模式》中对于单件的描述发现了个更安全的写法：</p>
+<pre><code>class USingleton
 {
-    UnityPlayer.UnitySendMessage(&quot;CoroutineHost&quot;, &quot;LoginCallback&quot;, android.provider.Settings.Secure.getString(UnityPlayerNativeActivity.GetUnityPlayer().getContentResolver(), android.provider.Settings.Secure.ANDROID_ID));
+public:
+    static USingleton&amp; Instance()
+    {
+        if (Instance == null)
+        {
+            Instance = new USingleton();
+        }
+        return *Instance;
+    }
+
+private:
+    USingleton();
+
+    USingleton* Instance;
 }
-</code></pre><p>UnitySendMessage中的第一个参数是unity里的gameobject，第二个是挂在这个go上的脚本的接口名，因此原则上需要被调用的go只挂一个script比较好。</p>
+</code></pre><p>这样返回的是单件类实例的引用而不是指针。</p>
 
       
     </div>
@@ -379,9 +384,7 @@ public static int PluginLangType()
       
         <div class="post-tags">
           
-            <a href="/tags/unity/" rel="tag"># unity</a>
-          
-            <a href="/tags/unity3d/" rel="tag"># unity3d</a>
+            <a href="/tags/singleton/" rel="tag"># singleton</a>
           
         </div>
       
@@ -394,15 +397,15 @@ public static int PluginLangType()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/06/set-araxis-to-git/" rel="next" title="修改Git默认合并比较工具">
+                <i class="fa fa-chevron-left"></i> 修改Git默认合并比较工具
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/06/set-araxis-to-git/" rel="prev" title="修改Git默认合并比较工具">
-                修改Git默认合并比较工具 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -449,17 +452,8 @@ public static int PluginLangType()
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -512,22 +506,6 @@ public static int PluginLangType()
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity调用android和ios接口的方法"><span class="nav-number">1.</span> <span class="nav-text">unity调用android和ios接口的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android调用unity接口"><span class="nav-number">2.</span> <span class="nav-text">android调用unity接口</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
