@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="android,unity3d," />
+  <meta name="keywords" content="unity3d,android," />
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。  unity导出android工程网上搜索到的方法都是需要更改android工程的manifest文件，因此首先需要的是将unity工程导出android工程。我使用的是新的gradle方法，因此需要安装Android Studio  打开unity的Build Settings，如图： 选择Androi">
-<meta name="keywords" content="android,unity3d">
+<meta name="description" content="首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。">
+<meta name="keywords" content="unity3d,android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="外部链接打开安卓应用的方法">
 <meta property="og:url" content="https://calvincwl.github.io/2017/06/15/url-open-android-app/index.html">
 <meta property="og:site_name" content="雲の向こう">
-<meta property="og:description" content="首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。  unity导出android工程网上搜索到的方法都是需要更改android工程的manifest文件，因此首先需要的是将unity工程导出android工程。我使用的是新的gradle方法，因此需要安装Android Studio  打开unity的Build Settings，如图： 选择Androi">
+<meta property="og:description" content="首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。">
 <meta property="og:image" content="https://calvincwl.github.io/2017/06/15/url-open-android-app/switch-platform.jpg">
-<meta property="og:updated_time" content="2017-06-15T09:01:45.134Z">
+<meta property="og:updated_time" content="2017-07-04T08:25:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="外部链接打开安卓应用的方法">
-<meta name="twitter:description" content="首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。  unity导出android工程网上搜索到的方法都是需要更改android工程的manifest文件，因此首先需要的是将unity工程导出android工程。我使用的是新的gradle方法，因此需要安装Android Studio  打开unity的Build Settings，如图： 选择Androi">
+<meta name="twitter:description" content="首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。">
 <meta name="twitter:image" content="https://calvincwl.github.io/2017/06/15/url-open-android-app/switch-platform.jpg">
 
 
@@ -210,6 +210,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -298,6 +308,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -324,6 +356,7 @@
       
         <p>首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。</p>
 <hr>
+<a id="more"></a>
 <h1 id="unity导出android工程"><a href="#unity导出android工程" class="headerlink" title="unity导出android工程"></a>unity导出android工程</h1><p>网上搜索到的方法都是需要更改android工程的manifest文件，因此首先需要的是将unity工程导出android工程。我使用的是新的gradle方法，因此需要安装<a href="https://developer.android.com/studio/index.html" target="_blank" rel="external">Android Studio</a></p>
 <ol>
 <li>打开unity的<strong>Build Settings</strong>，如图：<img src="/2017/06/15/url-open-android-app/switch-platform.jpg" alt="switch-platform.jpg" title=""></li>
@@ -378,6 +411,7 @@
 &lt;/html&gt;
 </code></pre><p>成功~</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实还是没做过android项目对AndroidManifest.xml的配置方法不熟，走了很多弯路，安装完后无法打开app、启动后闪退等……</p>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>微信的WebView貌似受到腾讯的限制scheme的方法不起效，还需尝试通过外部网页调用的方法。</p>
 
       
     </div>
@@ -407,9 +441,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"># android</a>
-          
             <a href="/tags/unity3d/" rel="tag"># unity3d</a>
+          
+            <a href="/tags/android/" rel="tag"># android</a>
           
         </div>
       
@@ -431,6 +465,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/29/android-project-configure/" rel="prev" title="友盟SDK接入工程配置指南">
+                友盟SDK接入工程配置指南 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,12 +540,21 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -515,7 +562,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -550,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity导出android工程"><span class="nav-number">1.</span> <span class="nav-text">unity导出android工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正常编译android工程需要修改的内容"><span class="nav-number">2.</span> <span class="nav-text">正常编译android工程需要修改的内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何让外部链接点击后启动游戏"><span class="nav-number">3.</span> <span class="nav-text">如何让外部链接点击后启动游戏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity导出android工程"><span class="nav-number">1.</span> <span class="nav-text">unity导出android工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正常编译android工程需要修改的内容"><span class="nav-number">2.</span> <span class="nav-text">正常编译android工程需要修改的内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何让外部链接点击后启动游戏"><span class="nav-number">3.</span> <span class="nav-text">如何让外部链接点击后启动游戏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">5.</span> <span class="nav-text">说明</span></a></li></ol></div>
             
 
           </div>

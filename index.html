@@ -205,6 +205,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -243,6 +253,145 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://calvincwl.github.io/2017/06/29/android-project-configure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="神の記述">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雲の向こう">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/29/android-project-configure/" itemprop="url">友盟SDK接入工程配置指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T11:25:10+08:00">
+                2017-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="获取SDK"><a href="#获取SDK" class="headerlink" title="获取SDK"></a>获取SDK</h1><h2 id="下载SDK操作流程"><a href="#下载SDK操作流程" class="headerlink" title="下载SDK操作流程"></a>下载SDK操作流程</h2><p>下载<a href="http://dev.umeng.com/social/android/sdk-download" target="_blank" rel="external">SDK最新版</a> 如下图所示：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1483670-ffae23b5869db6a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/29/android-project-configure/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -295,6 +444,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -320,65 +491,15 @@
 
       
         
-          
-            <p>首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。</p>
+          <p>首次正式接触安卓工程，正好要做个点击外部链接（分享链接）打开游戏的功能碰到了点问题总结一下。</p>
 <hr>
-<h1 id="unity导出android工程"><a href="#unity导出android工程" class="headerlink" title="unity导出android工程"></a>unity导出android工程</h1><p>网上搜索到的方法都是需要更改android工程的manifest文件，因此首先需要的是将unity工程导出android工程。我使用的是新的gradle方法，因此需要安装<a href="https://developer.android.com/studio/index.html" target="_blank" rel="external">Android Studio</a></p>
-<ol>
-<li>打开unity的<strong>Build Settings</strong>，如图：<img src="/2017/06/15/url-open-android-app/switch-platform.jpg" alt="switch-platform.jpg" title=""></li>
-<li>选择<strong>Android</strong>平台并点击<strong>Switch Platform</strong>；</li>
-<li>点击<strong>Player Settings</strong>；</li>
-</ol>
-<ul>
-<li>检查是否设置了<strong>Other Settings</strong>的<strong>Package Name</strong>，gradle的导出方式必须填写这项；</li>
-<li>在<strong>Publishing Settings</strong>中可以先加上签名信息（gradle方式发布release包必须有签名）。</li>
-</ul>
-<ol>
-<li>回到<strong>Build Settings</strong>将<strong>Build System</strong>改为<strong>Gradle (New)</strong>并勾选上<strong>Export Project</strong>后点击<strong>Export</strong>，选择想要导出的文件夹点击<strong>Select Folder</strong>后工程就会被导出。</li>
-</ol>
-<h1 id="正常编译android工程需要修改的内容"><a href="#正常编译android工程需要修改的内容" class="headerlink" title="正常编译android工程需要修改的内容"></a>正常编译android工程需要修改的内容</h1><p>unity导出时可能一些信息已经过时需要自己更新。</p>
-<ol>
-<li><strong>build.gradle</strong>是gradle自动化编译过程的配置文件，其中可以找到类似于</li>
-</ol>
-<pre><code>buildscript {
-    ...
-    dependencies {
-        classpath &apos;com.android.tools.build:gradle:2.3.2&apos;
-    }
-}
-</code></pre><p>的代码，在<a href="https://developer.android.com/studio/releases/gradle-plugin.html#revisions" target="_blank" rel="external">Android Plugin for Gradle</a>中确认最新的工具版本号将<strong>2.3.2</strong>替换为最新的；</p>
-<ol>
-<li>打开Android Studio选择<strong>Import project (Eclipse ADT, Gradle, etc.)</strong>选择导出工程的build.gradle文件后点击<strong>OK</strong>，等待gradle执行完成；</li>
-<li>这步是可选操作，构建完成后会在工程目录下生成gradle/wrapper的目录结构，其中存放的是gradle工具及配置信息。如果想要将gradle更新到最新版本，可以用文本工具打开<strong>gradle-wrapper.properties</strong>文件，将<strong>distributionUrl</strong>项的值改为<a href="https://services.gradle.org/distributions/" target="_blank" rel="external">最新包的地址</a>的完整包地址，如<strong>https\://services.gradle.org/distributions/gradle-4.0-all.zip</strong>，其中冒号前需要加转义符。</li>
-</ol>
-<h1 id="如何让外部链接点击后启动游戏"><a href="#如何让外部链接点击后启动游戏" class="headerlink" title="如何让外部链接点击后启动游戏"></a>如何让外部链接点击后启动游戏</h1><p>需要在你的启动activity中加入<strong>intent-filter</strong>字段，首先这个字段是可以重复的，一开始写在一起于是怎么打包都无法打开游戏……unity导出的工程只有一个activity——<strong>UnityPlayerActivity</strong>，然后列出几个<strong>intent-filter</strong>字段下的关键属性：</p>
-<ul>
-<li>添加<strong>action</strong>属性设置值为”android.intent.action.VIEW”；</li>
-<li>添加<strong>category</strong>属性设置值为”android.intent.category.DEFAULT”，这样可以接受外部任意输入；</li>
-<li>添加<strong>category</strong>属性设置值为”android.intent.category.BROWSABLE”，这样可以通过浏览器启动；</li>
-<li>添加<strong>data</strong>属性，我只用到了<strong>android:scheme</strong>和<strong>android:host</strong>两个，其实<strong>android:scheme</strong>就够了，具体这些参数什么含义以及填写规则可以查看<a href="http://www.jianshu.com/p/1cd02fe1810f" target="_blank" rel="external">Android 使用Scheme实现从网页启动APP</a></li>
-</ul>
-<hr>
-<p>完成后的代码大致如下：</p>
-<pre><code>&lt;activity&gt;
-    &lt;intent-filter&gt;
-        &lt;!-- 原有的内容 --&gt;
-    &lt;/intent-filter&gt;
-    &lt;intent-filter&gt;
-        &lt;action android:name=&quot;android.intent.action.VIEW&quot; /&gt;
-        &lt;category android:name=&quot;android.intent.category.DEFAULT&quot; /&gt;
-        &lt;category android:name=&quot;android.intent.category.BROWSABLE&quot; /&gt;
-        &lt;data android:scheme=&quot;myscheme&quot; android:host=&quot;myhost&quot; /&gt;
-    &lt;/intent-filter&gt;
-&lt;/activity&gt;
-</code></pre><p>于是再编写个简单html文件测试功能：</p>
-<pre><code>&lt;html&gt;
-&lt;a href=&quot;myscheme://myhost/?param=value&quot;&gt;start my app!&lt;/a&gt;
-&lt;/html&gt;
-</code></pre><p>成功~</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实还是没做过android项目对AndroidManifest.xml的配置方法不熟，走了很多弯路，安装完后无法打开app、启动后闪退等……</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/15/url-open-android-app/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -462,6 +583,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -487,8 +630,7 @@
 
       
         
-          
-            <p>通常创建单件的代码都是长这样的：</p>
+          <p>通常创建单件的代码都是长这样的：</p>
 <pre><code>class USingleton
 {
 public:
@@ -506,42 +648,14 @@ private:
 
     USingleton* Instance;
 }
-</code></pre><p>最近看了《游戏编程模式》中对于单件的描述发现了个更安全的写法：</p>
-<pre><code>class USingleton
-{
-public:
-    static USingleton&amp; Instance()
-    {
-        if (Instance == null)
-        {
-            Instance = new USingleton();
-        }
-        return *Instance;
-    }
-
-private:
-    USingleton() {}
-
-    USingleton* Instance;
-}
-</code></pre><p>这样返回的是单件类实例的引用而不是指针。<br>以下是个更现代的版本：</p>
-<pre><code>class USingleton
-{
-public:
-    static USingleton&amp; Instance()
-    {
-        static USingleton Instance;
-        return Instance;
-    }
-
-private:
-    USingleton() {}
-}
-</code></pre><blockquote>
-<p>C++11保证一个局部静态变量的初始化只进行一次，哪怕是在多线程的情况下也是如此。所以，如果你有一个现代C++编译器的话，这份代码是线程安全的。</p>
-</blockquote>
-
-          
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/07/singleton/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -624,6 +738,28 @@ private:
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -732,7 +868,7 @@ private:
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/06/06/unity-to-android/" itemprop="url">unity与android/ios之间的相互调用</a></h1>
+                <a class="post-title-link" href="/2017/06/06/unity-to-android/" itemprop="url">unity与android之间的相互调用</a></h1>
         
 
         <div class="post-meta">
@@ -754,6 +890,28 @@ private:
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -781,38 +939,23 @@ private:
       
         
           
-            <h1 id="unity调用android和ios接口的方法"><a href="#unity调用android和ios接口的方法" class="headerlink" title="unity调用android和ios接口的方法"></a>unity调用android和ios接口的方法</h1><p>代码示例：</p>
-<pre><code>[DllImport(&quot;__Internal&quot;)]
-private static extern int _LangType();
-public static int PluginLangType()
-{
-#if UNITY_EDITOR
-    return 10;
-#elif UNITY_IOS
-    return _LangType();
-    #elif UNITY_ANDROID
-    using(AndroidJavaClass jc = new AndroidJavaClass(&quot;com.TKZC.MoblieInterFace&quot;))
-    {
-        if (jc != null)
-        {
-            return jc.CallStatic&lt;int&gt;(&quot;LangType&quot;);
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-#else
-    return 10;
-#endif
-}
-</code></pre><h1 id="android调用unity接口"><a href="#android调用unity接口" class="headerlink" title="android调用unity接口"></a>android调用unity接口</h1><p>代码示例：</p>
+            <h1 id="unity调用android接口的方法"><a href="#unity调用android接口的方法" class="headerlink" title="unity调用android接口的方法"></a>unity调用android接口的方法</h1><p>代码示例：</p>
+<pre><code>AndroidJavaClass jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;);
+AndroidJavaObject jo = jc.GetStatic&lt;AndroidJavaObject&gt;(&quot;currentActivity&quot;);
+jo.CallStatic(&quot;static_foo&quot;);
+jo.Call(&quot;foo&quot;);
+</code></pre><ul>
+<li>AndroidJavaClass是Java类的指针，如果调用该类的静态方法可以直接调用CallStatic方法；</li>
+<li>AndroidJavaObject是Java的对象，通过获取的对象才能用Call方法调用其成员方法。</li>
+</ul>
+<h1 id="android调用unity接口"><a href="#android调用unity接口" class="headerlink" title="android调用unity接口"></a>android调用unity接口</h1><p>代码示例：</p>
 <pre><code>public static void Login()
 {
-    UnityPlayer.UnitySendMessage(&quot;CoroutineHost&quot;, &quot;LoginCallback&quot;, android.provider.Settings.Secure.getString(UnityPlayerNativeActivity.GetUnityPlayer().getContentResolver(), android.provider.Settings.Secure.ANDROID_ID));
+    UnityPlayer.UnitySendMessage(&quot;GameObject&quot;, &quot;Foo&quot;, params);
 }
-</code></pre><p>UnitySendMessage中的第一个参数是unity里的gameobject，第二个是挂在这个go上的脚本的接口名，因此原则上需要被调用的go只挂一个script比较好。</p>
+</code></pre><ul>
+<li>UnitySendMessage中的第一个参数是unity里的gameobject，第二个是挂在这个go上的脚本的接口名，因此原则上需要被调用的go只挂一个script比较好。</li>
+</ul>
 
           
         
@@ -892,12 +1035,21 @@ public static int PluginLangType()
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -905,7 +1057,7 @@ public static int PluginLangType()
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="unity3d,unity," />
+  <meta name="keywords" content="unity3d," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
-<meta name="keywords" content="unity3d,unity">
+<meta name="description" content="unity调用android接口的方法代码示例： AndroidJavaClass jc = new AndroidJavaClass(&amp;quot;com.unity3d.player.UnityPlayer&amp;quot;); AndroidJavaObject jo = jc.GetStatic&amp;lt;AndroidJavaObject&amp;gt;(&amp;quot;currentActivity&amp;quot">
+<meta name="keywords" content="unity3d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="unity与android&#x2F;ios之间的相互调用">
+<meta property="og:title" content="unity与android之间的相互调用">
 <meta property="og:url" content="https://calvincwl.github.io/2017/06/06/unity-to-android/index.html">
 <meta property="og:site_name" content="雲の向こう">
-<meta property="og:description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
-<meta property="og:updated_time" content="2017-06-07T02:39:37.055Z">
+<meta property="og:description" content="unity调用android接口的方法代码示例： AndroidJavaClass jc = new AndroidJavaClass(&amp;quot;com.unity3d.player.UnityPlayer&amp;quot;); AndroidJavaObject jo = jc.GetStatic&amp;lt;AndroidJavaObject&amp;gt;(&amp;quot;currentActivity&amp;quot">
+<meta property="og:updated_time" content="2017-07-04T08:25:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="unity与android&#x2F;ios之间的相互调用">
-<meta name="twitter:description" content="unity调用android和ios接口的方法代码示例： [DllImport(&amp;quot;__Internal&amp;quot;)] private static extern int _LangType(); public static int PluginLangType() { #if UNITY_EDITOR     return 10; #elif UNITY_IOS     return">
+<meta name="twitter:title" content="unity与android之间的相互调用">
+<meta name="twitter:description" content="unity调用android接口的方法代码示例： AndroidJavaClass jc = new AndroidJavaClass(&amp;quot;com.unity3d.player.UnityPlayer&amp;quot;); AndroidJavaObject jo = jc.GetStatic&amp;lt;AndroidJavaObject&amp;gt;(&amp;quot;currentActivity&amp;quot">
 
 
 
@@ -137,7 +137,7 @@
 
 
 
-  <title>unity与android/ios之间的相互调用 | 雲の向こう</title>
+  <title>unity与android之间的相互调用 | 雲の向こう</title>
   
 
 
@@ -208,6 +208,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -273,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">unity与android/ios之间的相互调用</h1>
+          <h1 class="post-title" itemprop="name headline">unity与android之间的相互调用</h1>
         
 
         <div class="post-meta">
@@ -295,6 +305,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mobile/" itemprop="url" rel="index">
+                    <span itemprop="name">Mobile</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -320,38 +352,23 @@
       
 
       
-        <h1 id="unity调用android和ios接口的方法"><a href="#unity调用android和ios接口的方法" class="headerlink" title="unity调用android和ios接口的方法"></a>unity调用android和ios接口的方法</h1><p>代码示例：</p>
-<pre><code>[DllImport(&quot;__Internal&quot;)]
-private static extern int _LangType();
-public static int PluginLangType()
-{
-#if UNITY_EDITOR
-    return 10;
-#elif UNITY_IOS
-    return _LangType();
-    #elif UNITY_ANDROID
-    using(AndroidJavaClass jc = new AndroidJavaClass(&quot;com.TKZC.MoblieInterFace&quot;))
-    {
-        if (jc != null)
-        {
-            return jc.CallStatic&lt;int&gt;(&quot;LangType&quot;);
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-#else
-    return 10;
-#endif
-}
-</code></pre><h1 id="android调用unity接口"><a href="#android调用unity接口" class="headerlink" title="android调用unity接口"></a>android调用unity接口</h1><p>代码示例：</p>
+        <h1 id="unity调用android接口的方法"><a href="#unity调用android接口的方法" class="headerlink" title="unity调用android接口的方法"></a>unity调用android接口的方法</h1><p>代码示例：</p>
+<pre><code>AndroidJavaClass jc = new AndroidJavaClass(&quot;com.unity3d.player.UnityPlayer&quot;);
+AndroidJavaObject jo = jc.GetStatic&lt;AndroidJavaObject&gt;(&quot;currentActivity&quot;);
+jo.CallStatic(&quot;static_foo&quot;);
+jo.Call(&quot;foo&quot;);
+</code></pre><ul>
+<li>AndroidJavaClass是Java类的指针，如果调用该类的静态方法可以直接调用CallStatic方法；</li>
+<li>AndroidJavaObject是Java的对象，通过获取的对象才能用Call方法调用其成员方法。</li>
+</ul>
+<h1 id="android调用unity接口"><a href="#android调用unity接口" class="headerlink" title="android调用unity接口"></a>android调用unity接口</h1><p>代码示例：</p>
 <pre><code>public static void Login()
 {
-    UnityPlayer.UnitySendMessage(&quot;CoroutineHost&quot;, &quot;LoginCallback&quot;, android.provider.Settings.Secure.getString(UnityPlayerNativeActivity.GetUnityPlayer().getContentResolver(), android.provider.Settings.Secure.ANDROID_ID));
+    UnityPlayer.UnitySendMessage(&quot;GameObject&quot;, &quot;Foo&quot;, params);
 }
-</code></pre><p>UnitySendMessage中的第一个参数是unity里的gameobject，第二个是挂在这个go上的脚本的接口名，因此原则上需要被调用的go只挂一个script比较好。</p>
+</code></pre><ul>
+<li>UnitySendMessage中的第一个参数是unity里的gameobject，第二个是挂在这个go上的脚本的接口名，因此原则上需要被调用的go只挂一个script比较好。</li>
+</ul>
 
       
     </div>
@@ -382,8 +399,6 @@ public static int PluginLangType()
         <div class="post-tags">
           
             <a href="/tags/unity3d/" rel="tag"># unity3d</a>
-          
-            <a href="/tags/unity/" rel="tag"># unity</a>
           
         </div>
       
@@ -476,12 +491,21 @@ public static int PluginLangType()
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -489,7 +513,7 @@ public static int PluginLangType()
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -524,7 +548,7 @@ public static int PluginLangType()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity调用android和ios接口的方法"><span class="nav-number">1.</span> <span class="nav-text">unity调用android和ios接口的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android调用unity接口"><span class="nav-number">2.</span> <span class="nav-text">android调用unity接口</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#unity调用android接口的方法"><span class="nav-number">1.</span> <span class="nav-text">unity调用android接口的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android调用unity接口"><span class="nav-number">2.</span> <span class="nav-text">android调用unity接口</span></a></li></ol></div>
             
 
           </div>
