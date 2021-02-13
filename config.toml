@@ -14,7 +14,7 @@ pygmentsCodeFencesGuessSyntax = true
 
 [params]
     author = "Calvin Lee"
-    info = "Coding & Traveling"
+    info = "Game development & Projects"
     description = ""
     keywords = "blog,game developer,personal"
     avatarURL = "images/avatar.png"
@@ -111,7 +111,7 @@ pygmentsCodeFencesGuessSyntax = true
 
         [languages.zh-cn.params]
             author = "李伟成"
-            info = "关于Unity3D开发、项目思考"
+            info = "关于游戏开发、项目思考"
             description = "一个想玩Houdini的Unity3D客户端主程"
             keywords = "博客, 游戏开发, 个人"
             footerContent = ""
