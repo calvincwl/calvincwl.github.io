@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>github on 神の記述</title><link>https://calvincwl.github.io/tags/github/</link><description>Recent content in github on 神の記述</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 06 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://calvincwl.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>修改Git默认合并比较工具</title><link>https://calvincwl.github.io/posts/set-araxis-to-git/</link><pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate><guid>https://calvincwl.github.io/posts/set-araxis-to-git/</guid><description>刚开始使用GitHub，感觉做比较之类的工具kdiff3比较粗糙，想要使用Araxis的工具来可视化Merge/Diff，于是上网找了点方法。
+设置Merge工具 指定Merge工具名 git config &amp;ndash;global merge.tool araxis
+指定Merge工具路径 git config &amp;ndash;global mergetool.araxis.path &amp;lsquo;C:\Program Files\Araxis\Araxis Merge\Compare&amp;rsquo;
+设置Diff工具 指定Diff工具名 git config &amp;ndash;global diff.tool araxis
+指定Diff工具路径 git config &amp;ndash;global difftool.araxis.path &amp;lsquo;C:\Program Files\Araxis\Araxis Merge\Compare&amp;rsquo;
+说明 Araxis现在使用Compare工具就可以实现Merge和Diff的功能，比起单独配置AraxisGitMerge和AraxisGitDiff工具更方便（无需设置各种参数）。</description></item></channel></rss>
